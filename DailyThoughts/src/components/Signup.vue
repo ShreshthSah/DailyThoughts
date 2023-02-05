@@ -21,7 +21,7 @@
             placeholder="Confirm password..."
             type="password"
           />
-          <button>Sign up</button>
+          <button><RouterLink to="/thoughts">Signup</RouterLink></button>
           <router-link class="router__link" to="/register">
             Already Registered? Login
           </router-link>

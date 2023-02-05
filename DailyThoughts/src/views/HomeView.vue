@@ -5,7 +5,7 @@
 <template>
   <h1>DailyThought</h1>
 <div id="image">  <img src='https://images.unsplash.com/photo-1674596346743-89398a9dde7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY3NTU0ODM1NA&ixlib=rb-4.0.3&q=80&w=1080' alt=""/></div>
-    <div>
+    <div id="item">
       <h3>Read your daily thought</h3>
       <button><RouterLink to="/thoughts">Click here</RouterLink></button>
     </div>
@@ -67,5 +67,10 @@ h3{
 }
 button{
   margin-left: 50%;
+}
+#item{
+  position: absolute;
+  top: 100px;
+  left:100px;
 }
 </style>
