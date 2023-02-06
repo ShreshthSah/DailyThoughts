@@ -1,8 +1,8 @@
 <template>
     <div class="signup">
       <div class="signup__container">
-        <h1>Signup</h1>
         <form @submit.prevent="userSignup()" class="signup__form" action="">
+          <h1>Register</h1>
           <span class="input__error">{{
             errors.username || errors.password || errors.password1
           }}</span>
@@ -22,7 +22,7 @@
             type="password"
           />
           <button><RouterLink to="/thoughts">Signup</RouterLink></button>
-          <router-link class="router__link" to="/register">
+          <router-link class="router__link" to="/login">
             Already Registered? Login
           </router-link>
         </form>

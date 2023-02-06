@@ -17,7 +17,7 @@ const router = createRouter({
     component:Thoughts
     },
     {
-      path:'/register',
+      path:'/login',
       name:'Login',
       component:Login
     },

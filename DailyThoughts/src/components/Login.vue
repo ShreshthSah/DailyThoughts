@@ -1,8 +1,8 @@
 <template>
     <div class="login">
       <div class="login__container">
-        <h1>Login</h1>
         <form @submit.prevent="userLogin" class="login__form" action="">
+          <h1>Login</h1>
           <span class="input__error">{{
             errors.username || errors.password
           }}</span>
