@@ -16,7 +16,7 @@
             placeholder="Enter password..."
             type="password"
           />
-          <button><RouterLink to="/thoughts">Login</RouterLink></button>
+          <button><RouterLink to="/thoughts" >Login</RouterLink></button>
         </form>
         <router-link class="router__link" to="/signup"
           ><span>New user? Signup</span></router-link
@@ -26,8 +26,15 @@
   </template>
   
   <script>
+  import login from './Thoughts.vue'
+  import isLoggedIn from './Thoughts.vue'
   import validator from "validator"
-import { RouterLink } from "vue-router";
+  import { RouterLink } from "vue-router";
+ console.log(login)
+ var x= ()=>{
+          login.methods.login
+         }
+         x()
 
   const validateLogin = (data) => {
   let errors = {};
@@ -68,6 +75,7 @@ import { RouterLink } from "vue-router";
         if (isInvalid) {
           this.errors = errors;
         } else {
+        
           this.errors = {};
           let lsUsers = localStorage.users;
           lsUsers = JSON.parse(lsUsers);
@@ -84,6 +92,7 @@ import { RouterLink } from "vue-router";
               );
               localStorage.setItem("activeUser", JSON.stringify(activeUser));
               this.$router.push("/dashboard");
+              
               window.location.reload();
             } else {
               this.errors.password = "Password not valid";

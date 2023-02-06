@@ -26,16 +26,17 @@ p -->
 }
 </style>
 <script>
-
+import getdata from "../views/api";
 import {UserService} from "@/services/UserService"
-// UserService.getwallpaper().then((res)=>{
-//     wally=res.data
-// })
-// console.log(wall)
+
+
 
 import Layout from './Layout.vue';
 export default{
     name:'Thoughts',
+
+
+
     data:function(){
         return(
             {

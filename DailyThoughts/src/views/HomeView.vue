@@ -37,14 +37,15 @@ import {UserService} from "../services/UserService"
 export default{
   name:"Home",
   components:{
-  
-},
+    
+  },
   data:function(){
-        return(
-            {
+    return(
+      {
                 users:UserService.getwallpaper(),
                 loading:false,
                 users:[],
+                new_IMG:'',
                
                 
                 errorMessage:null
@@ -57,8 +58,8 @@ export default{
                 let response=await UserService.getwallpaper()
                 
                 this.loading=false
-                this.users=response.request
-                
+                this.users=response.request.responseURL
+                this.new_IMG=response.request.responseURL
                 console.log(response.request.responseURL)
               }
               catch(err){
@@ -69,8 +70,9 @@ export default{
               
             },
             
+            
           }
-          // console.log(this.users)
+         
 </script>
 <style>
 

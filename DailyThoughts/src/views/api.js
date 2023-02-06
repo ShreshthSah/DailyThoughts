@@ -1,6 +1,6 @@
-import {axios} from axios
+import axios from "axios"
 
-const getdata=(param={})=>{
+const getdata=(params={})=>{
   axios.get(`https://source.unsplash.com/random`,{
 
     params:{
