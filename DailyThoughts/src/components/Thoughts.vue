@@ -11,7 +11,7 @@
     </div>
     <div v-if="!isLoggedIn">
         Please first login into your account
-        <RouterLink to="/register">Register</RouterLink>
+        <RouterLink to="/login">Login</RouterLink>
     </div>
     
     
